@@ -1,4 +1,12 @@
-html { box-sizing: border-box; }
+html {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #2c6892;
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 *,
 *::before,
@@ -7,7 +15,20 @@ html { box-sizing: border-box; }
 }
 
 body {
+  color: white;
   font-family: Helvetica, Arial, san-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  font-family: 'Saira Stencil One';
+  text-shadow: 3px 3px black;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-shadow: 2px 2px #0b2e4a;
 }
 
 #header {
@@ -33,7 +54,7 @@ body {
 
 #Game {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 1024px;
   margin: 0 auto;
 }
@@ -48,10 +69,18 @@ body {
   flex-wrap: wrap;
   max-width: 500px;
   outline: 1px solid black;
-  background-image: url(../images/water.png);
   background-repeat: repeat;
-  background-color:rgb(50,90,180);
+  background-color: rgba(15, 87, 144, 0.6);
   animation: backgroundScroll 80s linear infinite;
+}
+
+#PlayerBoard {
+  width: 300px;
+}
+
+#PlayerBoard .cell {
+  width: 30px;
+  height: 30px;
 }
 
 .BoardMessage {
@@ -77,7 +106,7 @@ body {
   flex: 1 0 9.5%;
   width: 50px;
   height: 50px;
-  border: 1px solid royalblue;
+  border: 1px solid #024377;
   cursor: pointer;
   text-align: center;
   color: red;
@@ -90,7 +119,6 @@ body {
   border-color: goldenrod;
 }
 .ship{
-  border: 1px solid green;
   background-image: url(../images/ship.png);
 }
 
